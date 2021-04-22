@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  sonar:
+    container_name: httpd24
+    image: httpd:2.4 
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    volumes:
+      - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
